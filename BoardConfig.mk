@@ -19,7 +19,9 @@ TARGET_BOOTLOADER_BOARD_NAME := XQ-AS52
 # Platform
 PRODUCT_PLATFORM := edo
 
+# Kernel cmdline
 BOARD_KERNEL_CMDLINE += androidboot.hardware=pdx206
+BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=pdx206
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
