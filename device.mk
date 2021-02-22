@@ -52,6 +52,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/firmware/touch_module_id_0x94.img:$(TARGET_COPY_OUT_VENDOR)/firmware/touch_module_id_0x94.img
 
+# Audio calibration
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
+    $(DEVICE_PATH)/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
+    $(DEVICE_PATH)/vendor/firmware/L-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/L-cs35l41-dsp1-spk-cali.bin \
+    $(DEVICE_PATH)/vendor/firmware/L-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/L-cs35l41-dsp1-spk-prot.bin \
+    $(DEVICE_PATH)/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
+    $(DEVICE_PATH)/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin
+
 # Device Init
 PRODUCT_PACKAGES += \
     fstab.pdx206 \
