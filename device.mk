@@ -61,6 +61,11 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
     $(DEVICE_PATH)/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin
 
+# Device-specific magnetometer and IMU orientation
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/etc/sensors/config/kona_ak991x_0_somc_product.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_ak991x_0_somc_product.json \
+    $(DEVICE_PATH)/vendor/etc/sensors/config/kona_lsm6dsm_0_somc_product.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_lsm6dsm_0_somc_product.json
+
 # Device Init
 PRODUCT_PACKAGES += \
     fstab.pdx206 \
