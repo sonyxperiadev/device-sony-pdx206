@@ -34,6 +34,22 @@
     <!-- If true, the doze component is not started until after the screen has been turned off
          and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+     
+     <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
+         the framework from using higher refresh rates, even if display modes with higher refresh
+         rates are available from hardware composer. Only has an effect if the value is
+         non-zero. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+     
+         <!-- The default refresh rate for a given device. Change this value to set a higher default
+         refresh rate. If the hardware composer on the device supports display modes with a higher
+         refresh rate than the default value specified here, the framework may use those higher
+         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
+         setFrameRate().
+         If a non-zero value is set for config_defaultPeakRefreshRate, then
+         config_defaultRefreshRate may be set to 0, in which case the value set for
+         config_defaultPeakRefreshRate will act as the default frame rate. -->
+    <integer name="config_defaultRefreshRate">60</integer>
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>

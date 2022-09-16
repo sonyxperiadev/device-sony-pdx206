@@ -90,6 +90,13 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=420 \
     ro.usb.pid_suffix=20d
 
+# Dynamic Refresh Rate
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.use_content_detection_for_refresh_rate=true
+
+# Refresh Rate timers
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_display_power_timer_ms=1000
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=80
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/edo/platform.mk)
 
